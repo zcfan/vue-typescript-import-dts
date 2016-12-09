@@ -1,4 +1,4 @@
-/// <reference path="../es-module/index.d.ts" />
+/// <reference path="../index.d.ts" />
 
 import Child1 from './child.vue'
 

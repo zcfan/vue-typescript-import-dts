@@ -1,10 +1,13 @@
-# vue-typescript-import-dts [![Build Status](https://travis-ci.org/locoslab/vue-typescript-import-dts.svg?branch=master)](https://travis-ci.org/locoslab/vue-typescript-import-dts) [![npm version](https://badge.fury.io/js/vue-typescript-import-dts.svg)](https://badge.fury.io/js/vue-typescript-import-dts)
-TypeScript declaration file that allows using `import` with `*.vue` files. The primary use case is a bundler environment like [Browserify](http://browserify.org/) with [vueify](https://github.com/vuejs/vueify). The file itself consists of 5 lines; this package is just for convenience.
+# NOTICE
+This is the esModule version of [vintem/TypescriptMochaWebpackDemo](https://github.com/vintem/TypescriptMochaWebpackDemo)
+
+I meet some trouble to serve two modules definition with same name in one module, so if you know what's I am talking about... Send a PR to the original repo please.
+
+Use this if you set the `esModule` option of vue-loader to `true`, or else check the link above.
 
 ## Usage
-This package requires TypeScript 2.0.3 and Vue.js 2.0.0, which ships with new type definitions in the Vue.js package itself. Both must be installed separately in your project, which allows choosing a suitable version.
 
-1. Install: `npm install vue-typescript-import-dts --save-dev`
+1. Install: `npm install zcfan/vue-typescript-import-dts --save-dev`
 
 2. Either include it in the `types` field of your `tsconfig.json`
 
@@ -24,9 +27,7 @@ or explicitly in a TypeScript source file
 Then, it is possible to `import` a `*.vue` file
 
 ```js
-import Child = require('./child.vue')
-// or
-import * as Child from './child.vue'
+import Child from './child.vue'
 ```
 
 Note: TypeScript will not type check, parse, or even verify the existence of the `.vue` file: this project only instructs the TypeScript compiler to assume the import of 'something' that ends with `.vue` succeeds and is a `Vue.ComponentOptions<Vue>` object.
