@@ -1,5 +1,5 @@
 # NOTICE
-This is the esModule version of [vintem/TypescriptMochaWebpackDemo](https://github.com/vintem/TypescriptMochaWebpackDemo)
+This is the esModule version of [locoslab/vue-typescript-import-dts](https://github.com/locoslab/vue-typescript-import-dts)
 
 I meet some trouble to serve two modules definition with same name in one module, so if you know what's I am talking about... Send a PR to the original repo please.
 
